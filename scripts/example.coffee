@@ -104,3 +104,20 @@ module.exports = (robot) ->
   # robot.respond /sleep it off/i, (res) ->
   #   robot.brain.set 'totalSodas', 0
   #   res.reply 'zzzzz'
+
+  robot.respond /generate dwarf/i, (res) ->
+    fnames1 = ['Thor', 'Far', 'Don', 'Har', 'Han', 'Hor', 'Fro', 'Bran', 'Gil', 'Hil', 'Mil', 'Mal', 'Duf', 'Flan', 'Mur', 'Fal'];
+
+    fnames2 = ['adin', 'grim', 'fin', 'gan', 'stot', 'agan', 'ick', 'lad', 'delev', 'stad', 'ric', 'swoggins', 'swoth', 'brad'];
+
+    lnames1 = ['Under', 'Silver', 'Gold', 'Iron', 'Stone', 'Steel', 'Gravel', 'Rune', 'Stout', 'McGuck'];
+
+    lnames2 = ['hammer', 'axe', 'hatchet', 'wall', 'barrel', 'beard', 'tooth', 'mead', 'mill', 'fellow', 'bucket', 'brow', 'shank'];
+
+    res.send '#{fnames1[Math.floor(Math.random()*fnames1.length)]}#{fnames2[Math.floor(Math.random()*fnames2.length)]} #{lnames1[Math.floor(Math.random()*lnames1.length)]}#{lnames2[Math.floor(Math.random()*lnames2.length)]}'
+
+  robot.respond /scrollclown/i, (res) ->
+    res.send 'http://www.mormonshare.com/wp-content/uploads/2014/08/cg_clown-tall.jpg'
+
+  robot.hear /so say we all/i, (res) ->
+    res.send 'SO SAY WE ALL!'
